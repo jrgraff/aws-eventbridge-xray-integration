@@ -1,0 +1,195 @@
+{
+    "Id": "1-66037487-48ccdcde7d3fb7b71afa5b26",
+    "Duration": 2.005,
+    "LimitExceeded": false,
+    "Segments": [
+        {
+            "Id": "08386b08e1373eee",
+            "Document": {
+                "id": "08386b08e1373eee",
+                "name": "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                "start_time": 1711502471.888,
+                "trace_id": "1-66037487-48ccdcde7d3fb7b71afa5b26",
+                "end_time": 1711502473.803,
+                "parent_id": "32079ddc8cd26029",
+                "http": {
+                    "response": {
+                        "status": 200
+                    }
+                },
+                "aws": {
+                    "request_id": "afbadee8-c1b0-42ef-b4d5-b7b37eafe5c5"
+                },
+                "origin": "AWS::Lambda",
+                "resource_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+            }
+        },
+        {
+            "Id": "7f74eca168eb7466",
+            "Document": {
+                "id": "7f74eca168eb7466",
+                "name": "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                "start_time": 1711502472.7116294,
+                "trace_id": "1-66037487-48ccdcde7d3fb7b71afa5b26",
+                "end_time": 1711502473.821441,
+                "parent_id": "08386b08e1373eee",
+                "aws": {
+                    "account_id": "891376978143",
+                    "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                    "cloudwatch_logs": [
+                        {
+                            "log_group": "/aws/lambda/eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                        }
+                    ],
+                    "resource_names": [
+                        "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                    ]
+                },
+                "origin": "AWS::Lambda::Function",
+                "subsegments": [
+                    {
+                        "id": "815f7e0309636a90",
+                        "name": "Initialization",
+                        "start_time": 1711502472.155443,
+                        "end_time": 1711502472.7104087,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                        }
+                    },
+                    {
+                        "id": "38c7729d73a104c9",
+                        "name": "Overhead",
+                        "start_time": 1711502473.8024573,
+                        "end_time": 1711502473.8211818,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                        }
+                    },
+                    {
+                        "id": "1c4ba2617d693e22",
+                        "name": "Invocation",
+                        "start_time": 1711502472.7209034,
+                        "end_time": 1711502473.8024201,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                        },
+                        "subsegments": [
+                            {
+                                "id": "b03df1468466d89d",
+                                "name": "Events",
+                                "start_time": 1711502473.003,
+                                "end_time": 1711502473.702,
+                                "http": {
+                                    "response": {
+                                        "status": 200
+                                    }
+                                },
+                                "aws": {
+                                    "retries": 0,
+                                    "region": "us-east-1",
+                                    "operation": "PutEvents",
+                                    "request_id": "76d030f7-81d5-491b-9660-b72e90fe96d3"
+                                },
+                                "namespace": "aws"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Id": "16d5222086afa354",
+            "Document": {
+                "id": "16d5222086afa354",
+                "name": "eventbridge-xray-webhook/Prod",
+                "start_time": 1711502471.816,
+                "trace_id": "1-66037487-48ccdcde7d3fb7b71afa5b26",
+                "end_time": 1711502473.805,
+                "http": {
+                    "request": {
+                        "url": "https://wszx40fygi.execute-api.us-east-1.amazonaws.com/Prod",
+                        "method": "GET",
+                        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0",
+                        "client_ip": "186.226.50.83",
+                        "x_forwarded_for": true
+                    },
+                    "response": {
+                        "status": 200,
+                        "content_length": 0
+                    }
+                },
+                "aws": {
+                    "api_gateway": {
+                        "account_id": "891376978143",
+                        "rest_api_id": "wszx40fygi",
+                        "stage": "Prod",
+                        "request_id": "799f7f23-3082-491b-b194-40fe1c534cc5"
+                    }
+                },
+                "annotations": {
+                    "aws:api_id": "wszx40fygi",
+                    "aws:api_stage": "Prod"
+                },
+                "metadata": {
+                    "default": {
+                        "extended_request_id": "VQ8lRHzXoAMEoKQ=",
+                        "request_id": "799f7f23-3082-491b-b194-40fe1c534cc5"
+                    }
+                },
+                "origin": "AWS::ApiGateway::Stage",
+                "resource_arn": "arn:aws:apigateway:us-east-1::/restapis/wszx40fygi/stages/Prod",
+                "subsegments": [
+                    {
+                        "id": "32079ddc8cd26029",
+                        "name": "Lambda",
+                        "start_time": 1711502471.855,
+                        "end_time": 1711502473.804,
+                        "http": {
+                            "request": {
+                                "url": "https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX/invocations",
+                                "method": "GET"
+                            },
+                            "response": {
+                                "status": 200,
+                                "content_length": 0
+                            }
+                        },
+                        "aws": {
+                            "function_name": "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                            "region": "us-east-1",
+                            "operation": "Invoke",
+                            "resource_names": [
+                                "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                            ]
+                        },
+                        "namespace": "aws"
+                    }
+                ]
+            }
+        },
+        {
+            "Id": "23a463c205739c9f",
+            "Document": {
+                "id": "23a463c205739c9f",
+                "name": "Events",
+                "start_time": 1711502473.003,
+                "trace_id": "1-66037487-48ccdcde7d3fb7b71afa5b26",
+                "end_time": 1711502473.702,
+                "parent_id": "b03df1468466d89d",
+                "inferred": true,
+                "http": {
+                    "response": {
+                        "status": 200
+                    }
+                },
+                "aws": {
+                    "retries": 0,
+                    "region": "us-east-1",
+                    "operation": "PutEvents",
+                    "request_id": "76d030f7-81d5-491b-9660-b72e90fe96d3"
+                },
+                "origin": "AWS::Events"
+            }
+        }
+    ]
+}

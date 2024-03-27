@@ -1,0 +1,108 @@
+{
+    "Id": "1-66037c53-4f0013714ad7fe0025628106",
+    "Duration": 0.473,
+    "LimitExceeded": false,
+    "Segments": [
+        {
+            "Id": "3c05f9e0f70f6169",
+            "Document": {
+                "id": "3c05f9e0f70f6169",
+                "name": "eventbridge-xray-webhook/Prod",
+                "start_time": 1711504467.129,
+                "trace_id": "1-66037c53-4f0013714ad7fe0025628106",
+                "end_time": 1711504467.602,
+                "http": {
+                    "request": {
+                        "url": "https://wszx40fygi.execute-api.us-east-1.amazonaws.com/Prod/",
+                        "method": "GET",
+                        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0",
+                        "client_ip": "186.226.50.83",
+                        "x_forwarded_for": true
+                    },
+                    "response": {
+                        "status": 200,
+                        "content_length": 0
+                    }
+                },
+                "aws": {
+                    "api_gateway": {
+                        "account_id": "891376978143",
+                        "rest_api_id": "wszx40fygi",
+                        "stage": "Prod",
+                        "request_id": "74a86e37-888c-48ac-904d-bf4ca1e37fc3"
+                    }
+                },
+                "annotations": {
+                    "aws:api_id": "wszx40fygi",
+                    "aws:api_stage": "Prod"
+                },
+                "metadata": {
+                    "default": {
+                        "extended_request_id": "VRBdCHf_IAMEICQ=",
+                        "request_id": "74a86e37-888c-48ac-904d-bf4ca1e37fc3"
+                    }
+                },
+                "origin": "AWS::ApiGateway::Stage",
+                "resource_arn": "arn:aws:apigateway:us-east-1::/restapis/wszx40fygi/stages/Prod",
+                "subsegments": [
+                    {
+                        "id": "5a132bf74081129f",
+                        "name": "Lambda",
+                        "start_time": 1711504467.132,
+                        "end_time": 1711504467.602,
+                        "http": {
+                            "request": {
+                                "url": "https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:891376978143:function:aws-lamda-layer/invocations",
+                                "method": "GET"
+                            },
+                            "response": {
+                                "status": 200,
+                                "content_length": 20
+                            }
+                        },
+                        "aws": {
+                            "function_name": "aws-lamda-layer",
+                            "region": "us-east-1",
+                            "operation": "Invoke",
+                            "resource_names": [
+                                "aws-lamda-layer"
+                            ]
+                        },
+                        "namespace": "aws"
+                    }
+                ]
+            }
+        },
+        {
+            "Id": "1c87f0271d98c1d5",
+            "Document": {
+                "id": "1c87f0271d98c1d5",
+                "name": "Lambda",
+                "start_time": 1711504467.132,
+                "trace_id": "1-66037c53-4f0013714ad7fe0025628106",
+                "end_time": 1711504467.602,
+                "parent_id": "5a132bf74081129f",
+                "inferred": true,
+                "http": {
+                    "request": {
+                        "url": "https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:891376978143:function:aws-lamda-layer/invocations",
+                        "method": "GET"
+                    },
+                    "response": {
+                        "status": 200,
+                        "content_length": 20
+                    }
+                },
+                "aws": {
+                    "function_name": "aws-lamda-layer",
+                    "region": "us-east-1",
+                    "operation": "Invoke",
+                    "resource_names": [
+                        "aws-lamda-layer"
+                    ]
+                },
+                "origin": "AWS::Lambda"
+            }
+        }
+    ]
+}

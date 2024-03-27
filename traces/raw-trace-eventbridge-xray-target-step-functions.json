@@ -1,0 +1,311 @@
+{
+    "Id": "1-660376f1-21216f833419119279742e39",
+    "Duration": 1.699,
+    "LimitExceeded": false,
+    "Segments": [
+        {
+            "Id": "1ccf88d75f91e8fb",
+            "Document": {
+                "id": "1ccf88d75f91e8fb",
+                "name": "WorkFlowStepFunctions-uTb5ZnUHjtYq",
+                "start_time": 1711503089.679,
+                "trace_id": "1-660376f1-21216f833419119279742e39",
+                "end_time": 1711503091.066,
+                "parent_id": "1216166f1ebffd40",
+                "aws": {
+                    "resource_arn": "arn:aws:states:us-east-1:891376978143:execution:WorkFlowStepFunctions-uTb5ZnUHjtYq:81558584-73a1-808b-1c90-6481d4ac684f_7a16f8c9-8d3b-ce2d-f17d-87b01d1c03cd"
+                },
+                "origin": "AWS::StepFunctions::StateMachine",
+                "resource_arn": "arn:aws:states:us-east-1:891376978143:stateMachine:WorkFlowStepFunctions-uTb5ZnUHjtYq",
+                "cause": {},
+                "subsegments": [
+                    {
+                        "id": "b31bdd13f1f05b6e",
+                        "name": "Logger",
+                        "start_time": 1711503089.76,
+                        "end_time": 1711503091.008,
+                        "cause": {},
+                        "subsegments": [
+                            {
+                                "id": "3d7359433a3de0c7",
+                                "name": "Lambda",
+                                "start_time": 1711503089.884,
+                                "end_time": 1711503090.941,
+                                "http": {
+                                    "response": {
+                                        "status": 200,
+                                        "content_length": 4
+                                    }
+                                },
+                                "aws": {
+                                    "status_code": 200,
+                                    "function_name": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De",
+                                    "operation": "Invoke",
+                                    "request_id": "dd86c5ea-0fb0-4f7f-a5eb-bdc6ad58c843",
+                                    "resource_names": [
+                                        "eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De"
+                                    ]
+                                },
+                                "namespace": "aws",
+                                "cause": {}
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Id": "4270a4c510875633",
+            "Document": {
+                "id": "4270a4c510875633",
+                "name": "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                "start_time": 1711503089.415285,
+                "trace_id": "1-660376f1-21216f833419119279742e39",
+                "end_time": 1711503089.5176098,
+                "parent_id": "772a7c44109f7d12",
+                "aws": {
+                    "account_id": "891376978143",
+                    "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                    "cloudwatch_logs": [
+                        {
+                            "log_group": "/aws/lambda/eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                        }
+                    ],
+                    "resource_names": [
+                        "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                    ]
+                },
+                "origin": "AWS::Lambda::Function",
+                "subsegments": [
+                    {
+                        "id": "90df63447c99c08a",
+                        "name": "Overhead",
+                        "start_time": 1711503089.5006125,
+                        "end_time": 1711503089.5175087,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                        }
+                    },
+                    {
+                        "id": "4331589743f31a41",
+                        "name": "Invocation",
+                        "start_time": 1711503089.4153826,
+                        "end_time": 1711503089.5005794,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                        },
+                        "subsegments": [
+                            {
+                                "id": "c2b623dd5689f854",
+                                "name": "Events",
+                                "start_time": 1711503089.416,
+                                "end_time": 1711503089.499,
+                                "http": {
+                                    "response": {
+                                        "status": 200
+                                    }
+                                },
+                                "aws": {
+                                    "retries": 0,
+                                    "region": "us-east-1",
+                                    "operation": "PutEvents",
+                                    "request_id": "3e33bbb0-747b-4df5-a841-0b562983beab"
+                                },
+                                "namespace": "aws"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Id": "37f697b0438106dc",
+            "Document": {
+                "id": "37f697b0438106dc",
+                "name": "eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De",
+                "start_time": 1711503090.6986713,
+                "trace_id": "1-660376f1-21216f833419119279742e39",
+                "end_time": 1711503090.9392638,
+                "parent_id": "155df146a86ad728",
+                "aws": {
+                    "account_id": "891376978143",
+                    "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De",
+                    "cloudwatch_logs": [
+                        {
+                            "log_group": "/aws/lambda/eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De"
+                        }
+                    ],
+                    "resource_names": [
+                        "eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De"
+                    ]
+                },
+                "origin": "AWS::Lambda::Function",
+                "subsegments": [
+                    {
+                        "id": "47881f14da28dc57",
+                        "name": "Initialization",
+                        "start_time": 1711503090.1517131,
+                        "end_time": 1711503090.6972666,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De"
+                        }
+                    },
+                    {
+                        "id": "852f737ce3b7a68f",
+                        "name": "Invocation",
+                        "start_time": 1711503090.6989603,
+                        "end_time": 1711503090.9381914,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De"
+                        }
+                    },
+                    {
+                        "id": "f5ff0a287ad52858",
+                        "name": "Overhead",
+                        "start_time": 1711503090.9382331,
+                        "end_time": 1711503090.939033,
+                        "aws": {
+                            "function_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Id": "772a7c44109f7d12",
+            "Document": {
+                "id": "772a7c44109f7d12",
+                "name": "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                "start_time": 1711503089.409,
+                "trace_id": "1-660376f1-21216f833419119279742e39",
+                "end_time": 1711503089.501,
+                "parent_id": "17aea1a4c7c6a15c",
+                "http": {
+                    "response": {
+                        "status": 200
+                    }
+                },
+                "aws": {
+                    "request_id": "fb36455c-4eda-4c58-8391-774d0ed72749"
+                },
+                "origin": "AWS::Lambda",
+                "resource_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+            }
+        },
+        {
+            "Id": "330f3396bfdaad4f",
+            "Document": {
+                "id": "330f3396bfdaad4f",
+                "name": "eventbridge-xray-webhook/Prod",
+                "start_time": 1711503089.367,
+                "trace_id": "1-660376f1-21216f833419119279742e39",
+                "end_time": 1711503089.503,
+                "http": {
+                    "request": {
+                        "url": "https://wszx40fygi.execute-api.us-east-1.amazonaws.com/Prod",
+                        "method": "GET",
+                        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0",
+                        "client_ip": "186.226.50.83",
+                        "x_forwarded_for": true
+                    },
+                    "response": {
+                        "status": 200,
+                        "content_length": 0
+                    }
+                },
+                "aws": {
+                    "api_gateway": {
+                        "account_id": "891376978143",
+                        "rest_api_id": "wszx40fygi",
+                        "stage": "Prod",
+                        "request_id": "8942af79-99be-4ba5-b475-486a2d5dd5fd"
+                    }
+                },
+                "annotations": {
+                    "aws:api_id": "wszx40fygi",
+                    "aws:api_stage": "Prod"
+                },
+                "metadata": {
+                    "default": {
+                        "extended_request_id": "VQ-FwFXoIAMEIQg=",
+                        "request_id": "8942af79-99be-4ba5-b475-486a2d5dd5fd"
+                    }
+                },
+                "origin": "AWS::ApiGateway::Stage",
+                "resource_arn": "arn:aws:apigateway:us-east-1::/restapis/wszx40fygi/stages/Prod",
+                "subsegments": [
+                    {
+                        "id": "17aea1a4c7c6a15c",
+                        "name": "Lambda",
+                        "start_time": 1711503089.371,
+                        "end_time": 1711503089.502,
+                        "http": {
+                            "request": {
+                                "url": "https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX/invocations",
+                                "method": "GET"
+                            },
+                            "response": {
+                                "status": 200,
+                                "content_length": 0
+                            }
+                        },
+                        "aws": {
+                            "function_name": "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX",
+                            "region": "us-east-1",
+                            "operation": "Invoke",
+                            "resource_names": [
+                                "eventbridge-xray-webhook-WebhookFunction-4A3GzZesnBOX"
+                            ]
+                        },
+                        "namespace": "aws"
+                    }
+                ]
+            }
+        },
+        {
+            "Id": "155df146a86ad728",
+            "Document": {
+                "id": "155df146a86ad728",
+                "name": "eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De",
+                "start_time": 1711503089.922,
+                "trace_id": "1-660376f1-21216f833419119279742e39",
+                "end_time": 1711503090.939,
+                "parent_id": "3d7359433a3de0c7",
+                "http": {
+                    "response": {
+                        "status": 200
+                    }
+                },
+                "aws": {
+                    "request_id": "dd86c5ea-0fb0-4f7f-a5eb-bdc6ad58c843"
+                },
+                "origin": "AWS::Lambda",
+                "resource_arn": "arn:aws:lambda:us-east-1:891376978143:function:eventbridge-xray-target-step-functi-LoggerFunction-Gn0gUTLlA3De"
+            }
+        },
+        {
+            "Id": "1216166f1ebffd40",
+            "Document": {
+                "id": "1216166f1ebffd40",
+                "name": "Events",
+                "start_time": 1711503089.416,
+                "trace_id": "1-660376f1-21216f833419119279742e39",
+                "end_time": 1711503089.499,
+                "parent_id": "c2b623dd5689f854",
+                "inferred": true,
+                "http": {
+                    "response": {
+                        "status": 200
+                    }
+                },
+                "aws": {
+                    "retries": 0,
+                    "region": "us-east-1",
+                    "operation": "PutEvents",
+                    "request_id": "3e33bbb0-747b-4df5-a841-0b562983beab"
+                },
+                "origin": "AWS::Events"
+            }
+        }
+    ]
+}
